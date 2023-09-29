@@ -13,6 +13,9 @@ def validar_caractere_especial(e) -> bool:
             for y in caracteres_especiais:
                 if x == y:
                     validacao = False
+    nome_email = e.split('@')
+    if nome_email[0].find('.') != -1:
+        validacao = False
     return validacao
 
 def validar_arroba(e) -> bool:
